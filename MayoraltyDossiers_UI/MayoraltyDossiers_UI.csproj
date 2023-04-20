@@ -1,0 +1,463 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85D0C828-0121-4299-AA2C-E5B78A498C82}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MayoraltyDossiers_UI</RootNamespace>
+    <AssemblyName>MayoraltyDossiers_UI</AssemblyName>
+    <ApplicationIcon>Icon1.ico</ApplicationIcon>
+    <Win32Resource>
+    </Win32Resource>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ADODB, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="DevComponents.DotNetBar, Version=7.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\DevComponents.DotNetBar.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v7.2, Version=7.2.2.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v7.2, Version=7.2.2.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v7.2, Version=7.2.2.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1" />
+    <Reference Include="DevExpress.XtraCharts.v7.2, Version=7.2.2.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v7.2, Version=7.2.2.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v7.2, Version=7.2.2.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1" />
+    <Reference Include="DevExpress.XtraNavBar.v7.2, Version=7.2.2.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1" />
+    <Reference Include="DevExpress.XtraPrinting.v7.2, Version=7.2.2.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v7.2, Version=7.2.2.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL" />
+    <Reference Include="Stimulsoft.Base, Version=2007.1.0.0, Culture=neutral, PublicKeyToken=766636bf3eac4938, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Stimulsoft Reports.Net\Crack\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls, Version=2007.1.0.0, Culture=neutral, PublicKeyToken=766636bf3eac4938, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Stimulsoft Reports.Net\Crack\Stimulsoft.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Editor, Version=2007.1.0.0, Culture=neutral, PublicKeyToken=766636bf3eac4938, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Stimulsoft Reports.Net\Crack\Stimulsoft.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2007.1.0.0, Culture=neutral, PublicKeyToken=766636bf3eac4938, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Stimulsoft Reports.Net\Crack\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Web, Version=2007.1.0.0, Culture=neutral, PublicKeyToken=766636bf3eac4938, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Stimulsoft Reports.Net\Crack\Stimulsoft.Report.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mayoralty_FilesDataSet.cs">
+      <DependentUpon>Mayoralty_FilesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Mayoralty_FilesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mayoralty_FilesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RepGraph_Xfm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepGraph_Xfm.designer.cs">
+      <DependentUpon>RepGraph_Xfm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PublicClass.cs" />
+    <Compile Include="RepAllItem_Xfm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepAllItem_Xfm.designer.cs">
+      <DependentUpon>RepAllItem_Xfm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_AllItemFile.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_AllItemFile.Designer.cs">
+      <DependentUpon>Rep_AllItemFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_BuildStep.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_BuildStep.Designer.cs">
+      <DependentUpon>Rep_BuildStep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_DiscureStep.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_DiscureStep.Designer.cs">
+      <DependentUpon>Rep_DiscureStep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_DiscureUse.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_DiscureUse.Designer.cs">
+      <DependentUpon>Rep_DiscureUse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchFile_Xfm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchFile_Xfm.Designer.cs">
+      <DependentUpon>SearchFile_Xfm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserChange_Xfm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserChange_Xfm.designer.cs">
+      <DependentUpon>UserChange_Xfm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserList_Xfm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserList_Xfm.Designer.cs">
+      <DependentUpon>UserList_Xfm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Xfm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Xfm.Designer.cs">
+      <DependentUpon>Main_Xfm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="RepGraph_Xfm.resx">
+      <DependentUpon>RepGraph_Xfm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepAllItem_Xfm.resx">
+      <DependentUpon>RepAllItem_Xfm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_AllItemFile.resx">
+      <DependentUpon>Rep_AllItemFile.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_BuildStep.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Rep_BuildStep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_DiscureStep.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Rep_DiscureStep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_DiscureUse.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Rep_DiscureUse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchFile_Xfm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SearchFile_Xfm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserChange_Xfm.resx">
+      <DependentUpon>UserChange_Xfm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserList_Xfm.resx">
+      <DependentUpon>UserList_Xfm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Xfm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Main_Xfm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting_Xfm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Setting_Xfm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start_Xfm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Start_Xfm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrtFile_Xfm.resx">
+      <DependentUpon>CrtFile_Xfm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPermission_Xfm.resx">
+      <DependentUpon>UserPermission_Xfm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Setting_Xfm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting_Xfm.Designer.cs">
+      <DependentUpon>Setting_Xfm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start_Xfm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start_Xfm.Designer.cs">
+      <DependentUpon>Start_Xfm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrtFile_Xfm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrtFile_Xfm.designer.cs">
+      <DependentUpon>CrtFile_Xfm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPermission_Xfm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPermission_Xfm.designer.cs">
+      <DependentUpon>UserPermission_Xfm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keditbookmarks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kexi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kchart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kcmdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xeyes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knotes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kdmconfig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ark1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keditbookmarks1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advancedsettings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\autostart1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kexi1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kate1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehause1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kchart1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kdmconfig1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kcmdf1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\autostart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advancedsettings1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shahrdari.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1191618063.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ksirtet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kcmx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gvim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\access.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Community Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kmenuedit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecycleBin03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\testbed_protocol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lassists.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fortress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package_games_board.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multiple_monitors.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go_kde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aktion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\style.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mayoralty_FilesDataSet.xsc">
+      <DependentUpon>Mayoralty_FilesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Mayoralty_FilesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Mayoralty_FilesDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Mayoralty_FilesDataSet.xss">
+      <DependentUpon>Mayoralty_FilesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\f-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon1.ico" />
+    <None Include="Resources\3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

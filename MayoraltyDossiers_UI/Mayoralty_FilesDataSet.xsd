@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Mayoralty_FilesDataSet" targetNamespace="http://tempuri.org/Mayoralty_FilesDataSet.xsd" xmlns:mstns="http://tempuri.org/Mayoralty_FilesDataSet.xsd" xmlns="http://tempuri.org/Mayoralty_FilesDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=.\SQLEXPRESS;Initial Catalog=Mayoralty_Files;Integrated Security=True" IsAppSettingsProperty="False" Modifier="Assembly" Name=".\sqlexpress.Mayoralty_Files.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BuildStep_VwTableAdapter" GeneratorDataComponentClassName="BuildStep_VwTableAdapter" Name="BuildStep_Vw" UserDataComponentName="BuildStep_VwTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef=".\sqlexpress.Mayoralty_Files.dbo" DbObjectName="Mayoralty_Files.dbo.BuildStep_Vw" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT StepUsetxt, CountStep FROM dbo.BuildStep_Vw</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CountStep" DataSetColumn="CountStep" />
+              <Mapping SourceColumn="StepUsetxt" DataSetColumn="StepUsetxt" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DiscureStep_VwTableAdapter" GeneratorDataComponentClassName="DiscureStep_VwTableAdapter" Name="DiscureStep_Vw" UserDataComponentName="DiscureStep_VwTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef=".\sqlexpress.Mayoralty_Files.dbo" DbObjectName="Mayoralty_Files.dbo.DiscureStep_Vw" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT DiscourUse_Step, DiscourUse_Count FROM dbo.DiscureStep_Vw</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DiscourUse_Step" DataSetColumn="DiscourUse_Step" />
+              <Mapping SourceColumn="DiscourUse_Count" DataSetColumn="DiscourUse_Count" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DiscureUse_VwTableAdapter" GeneratorDataComponentClassName="DiscureUse_VwTableAdapter" Name="DiscureUse_Vw" UserDataComponentName="DiscureUse_VwTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef=".\sqlexpress.Mayoralty_Files.dbo" DbObjectName="Mayoralty_Files.dbo.DiscureUse_Vw" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT DiscourUseText, DiscourUse FROM dbo.DiscureUse_Vw</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DiscourUseText" DataSetColumn="DiscourUseText" />
+              <Mapping SourceColumn="DiscourUse" DataSetColumn="DiscourUse" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Mayoralty_FilesDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Mayoralty_FilesDataSet" msprop:Generator_DataSetName="Mayoralty_FilesDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BuildStep_Vw" msprop:Generator_UserTableName="BuildStep_Vw" msprop:Generator_RowDeletedName="BuildStep_VwRowDeleted" msprop:Generator_RowChangedName="BuildStep_VwRowChanged" msprop:Generator_RowClassName="BuildStep_VwRow" msprop:Generator_RowChangingName="BuildStep_VwRowChanging" msprop:Generator_RowEvArgName="BuildStep_VwRowChangeEvent" msprop:Generator_RowEvHandlerName="BuildStep_VwRowChangeEventHandler" msprop:Generator_TableClassName="BuildStep_VwDataTable" msprop:Generator_TableVarName="tableBuildStep_Vw" msprop:Generator_RowDeletingName="BuildStep_VwRowDeleting" msprop:Generator_TablePropName="BuildStep_Vw">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CountStep" msprop:Generator_UserColumnName="CountStep" msprop:Generator_ColumnVarNameInTable="columnCountStep" msprop:Generator_ColumnPropNameInRow="CountStep" msprop:Generator_ColumnPropNameInTable="CountStepColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="StepUsetxt" msdata:ReadOnly="true" msprop:Generator_UserColumnName="StepUsetxt" msprop:Generator_ColumnPropNameInRow="StepUsetxt" msprop:Generator_ColumnVarNameInTable="columnStepUsetxt" msprop:Generator_ColumnPropNameInTable="StepUsetxtColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DiscureStep_Vw" msprop:Generator_UserTableName="DiscureStep_Vw" msprop:Generator_RowDeletedName="DiscureStep_VwRowDeleted" msprop:Generator_RowChangedName="DiscureStep_VwRowChanged" msprop:Generator_RowClassName="DiscureStep_VwRow" msprop:Generator_RowChangingName="DiscureStep_VwRowChanging" msprop:Generator_RowEvArgName="DiscureStep_VwRowChangeEvent" msprop:Generator_RowEvHandlerName="DiscureStep_VwRowChangeEventHandler" msprop:Generator_TableClassName="DiscureStep_VwDataTable" msprop:Generator_TableVarName="tableDiscureStep_Vw" msprop:Generator_RowDeletingName="DiscureStep_VwRowDeleting" msprop:Generator_TablePropName="DiscureStep_Vw">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DiscourUse_Step" msprop:Generator_UserColumnName="DiscourUse_Step" msprop:Generator_ColumnVarNameInTable="columnDiscourUse_Step" msprop:Generator_ColumnPropNameInRow="DiscourUse_Step" msprop:Generator_ColumnPropNameInTable="DiscourUse_StepColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DiscourUse_Count" msprop:Generator_UserColumnName="DiscourUse_Count" msprop:Generator_ColumnVarNameInTable="columnDiscourUse_Count" msprop:Generator_ColumnPropNameInRow="DiscourUse_Count" msprop:Generator_ColumnPropNameInTable="DiscourUse_CountColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DiscureUse_Vw" msprop:Generator_UserTableName="DiscureUse_Vw" msprop:Generator_RowDeletedName="DiscureUse_VwRowDeleted" msprop:Generator_RowChangedName="DiscureUse_VwRowChanged" msprop:Generator_RowClassName="DiscureUse_VwRow" msprop:Generator_RowChangingName="DiscureUse_VwRowChanging" msprop:Generator_RowEvArgName="DiscureUse_VwRowChangeEvent" msprop:Generator_RowEvHandlerName="DiscureUse_VwRowChangeEventHandler" msprop:Generator_TableClassName="DiscureUse_VwDataTable" msprop:Generator_TableVarName="tableDiscureUse_Vw" msprop:Generator_RowDeletingName="DiscureUse_VwRowDeleting" msprop:Generator_TablePropName="DiscureUse_Vw">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DiscourUseText" msdata:ReadOnly="true" msprop:Generator_UserColumnName="DiscourUseText" msprop:Generator_ColumnVarNameInTable="columnDiscourUseText" msprop:Generator_ColumnPropNameInRow="DiscourUseText" msprop:Generator_ColumnPropNameInTable="DiscourUseTextColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="22" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DiscourUse" msprop:Generator_UserColumnName="DiscourUse" msprop:Generator_ColumnVarNameInTable="columnDiscourUse" msprop:Generator_ColumnPropNameInRow="DiscourUse" msprop:Generator_ColumnPropNameInTable="DiscourUseColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
